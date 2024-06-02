@@ -1,0 +1,86 @@
+{{ block title }}Results and Comparison{{ endblock }}
+{{ block content }}
+
+    <p>
+        Based on your answers, your MBTI is {{ player.final_mbti }}.
+    </p>
+
+    {{ if player.final_mbti == "ENFJ" }}
+        <p>
+            <img src="{{ static 'cats/ENFJ.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "ENFP" }}
+        <p>
+            <img src="{{ static 'cats/ENFP.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "ENTJ" }}
+        <p>
+            <img src="{{ static 'cats/ENTJ.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "ENTP" }}
+        <p>
+            <img src="{{ static 'cats/ENTP.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "ESFJ" }}
+        <p>
+            <img src="{{ static 'cats/ESFJ.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "ESFP" }}
+        <p>
+            <img src="{{ static 'cats/ESFP.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "ESTJ" }}
+        <p>
+            <img src="{{ static 'cats/ESTJ.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "ESTP" }}
+        <p>
+            <img src="{{ static 'cats/ESTP.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "INFJ" }}
+        <p>
+            <img src="{{ static 'cats/INFJ.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "INFP" }}
+        <p>
+            <img src="{{ static 'cats/INFP.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "INTJ" }}
+        <p>
+            <img src="{{ static 'cats/INTJ.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "INTP" }}
+        <p>
+            <img src="{{ static 'cats/INTP.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "ISFJ" }}
+        <p>
+            <img src="{{ static 'cats/ISFJ.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "ISFP" }}
+        <p>
+            <img src="{{ static 'cats/ISFP.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "ISTJ" }}
+        <p>
+            <img src="{{ static 'cats/ISTJ.png' }}" >
+        </p>
+    {{ elif player.final_mbti == "ISTP" }}
+        <p>
+            <img src="{{ static 'cats/ISTP.png' }}" >
+        </p>
+    {{ endif }}
+
+    <p>
+        If you haven't already, take the actual <a href="https://www.16personalities.com/free-personality-test" target="_blank">Myers-Briggs Type Indicator Test</a> here!
+    </p>
+
+    <p>
+        Based on the Myers-Briggs Type Indicator Test result and the Cat MBTI Test result, are they the same?
+    </p>
+    <button name="true_or_not" value="Same">Yes</button>
+    <button name="true_or_not" value="Not the same">No</button>
+
+
+{{ endblock }}
+

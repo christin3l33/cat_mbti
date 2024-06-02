@@ -1,0 +1,18 @@
+{{ block title }}Cat MBTI Result{{ endblock }}
+{{ block content }}
+
+
+    {{ if player.true_or_not == "Same" }}
+    <p>
+        Thank you for playing! You will be rewarded with $10.
+    </p>
+    {{ elif player.true_or_not == "Not the same" }}
+    <p>
+        Thank you for playing!
+    </p>
+    {{ endif }}
+
+<iframe src="https://gifdb.com/images/high/ok-bye-cat-closing-door-6spf9iw48lqibg17.gif" width="500" height="500"></iframe>
+
+{{ endblock }}
+
