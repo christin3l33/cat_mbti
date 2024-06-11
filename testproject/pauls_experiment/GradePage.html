@@ -1,0 +1,46 @@
+{{ block title }}
+    Results
+{{ endblock }}
+
+{{ block content }}
+
+
+    {{ if player.correct == 7 }}
+    <p>
+        All questions were answered correctly.
+    </p>
+    {{ elif player.correct == 3 }}
+    <p>
+        Question 3 is incorrect.
+    </p>
+    {{ elif player.correct == 5 }}
+    <p>
+        Question 2 is incorrect.
+    </p>
+    {{ elif player.correct == 6 }}
+    <p>
+        Question 1 is incorrect.
+    </p>
+    {{ elif player.correct == 0 }}
+    <p>
+        All questions are incorrect.
+    </p>
+    {{ endif }}
+
+    {{ if player.cheated > 0 }}
+    <p>
+        Cheating was detected in some/all the answers. To gain back your points, you may take this opportunity to
+        explain your code in the boxes below.
+    </p>
+    {{ elif player.cheated == 0 }}
+    <p>
+        Cheating was not detected in the answers. Please submit "N/A" in the boxes below.
+    </p>
+
+    {{ endif }}
+
+{{ formfields }}
+{{ next_button }}
+{{ endblock }}
+
+

@@ -9,6 +9,12 @@ SESSION_CONFIGS = [
         app_sequence=['personal_project'],
     ),
     dict(
+        name='pauls_ai_experiment',
+        display_name="Coding HW AI Detector",
+        num_demo_participants=1,
+        app_sequence=['pauls_experiment'],
+    ),
+    dict(
         name='cards_base',
         display_name="Cards (baseline)",
         cards_exchange_rate=100.0,
