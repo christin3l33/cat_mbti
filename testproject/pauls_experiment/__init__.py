@@ -1,6 +1,4 @@
 from otree.api import *
-import re
-
 
 doc = """
 Students will get their Python codes graded
@@ -49,14 +47,14 @@ class Question1(Page):
 
     @staticmethod
     def before_next_page(player: Player, timeout_happened):
-        with open('user_q1.py', 'w') as file:
+        with open('../user_q1.py', 'w') as file:
             file.write(player.q1)
 
         user_list = [5,6,1,2]
         correct_list = [1,2,5,6]
 
-        with open('user_q1.py', 'r') as file:
-            from user_q1 import my_sort
+        with open('../user_q1.py', 'r') as file:
+            from testproject.user_q1 import my_sort
 
             answer_list = my_sort(user_list)
             if answer_list == correct_list:
@@ -79,14 +77,14 @@ class Question2(Page):
 
     @staticmethod
     def before_next_page(player: Player, timeout_happened):
-        with open('user_q2.py', 'w') as file:
+        with open('../user_q2.py', 'w') as file:
             file.write(player.q2)
 
         user_list = [5,6,1,2]
         correct_length = 4
 
-        with open('user_q2.py', 'r') as file:
-            from user_q2 import my_length
+        with open('../user_q2.py', 'r') as file:
+            from testproject.user_q2 import my_length
 
             answer_length = my_length(user_list)
             if answer_length == correct_length:
